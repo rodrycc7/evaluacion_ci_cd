@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: step01
-        run: ls
+       run: ls -la
      - name: step02
-        run: date
+       run: date
      - name: step03
-        run: df -h
+       run: df -h
       
