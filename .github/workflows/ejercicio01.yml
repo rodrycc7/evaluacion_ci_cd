@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   ejercicio01:
-  runs-on: ubuntu:latest
+  runs-on: ubuntu-latest
   steps:
     - name: step01
       run: ls -la
