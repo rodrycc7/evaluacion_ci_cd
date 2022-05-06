@@ -7,10 +7,18 @@ jobs:
   ejercicio01:
     runs-on: ubuntu-latest
     steps:
-     - name: step01
+     - name: step01 - Crear directorio
+       run: mkdir para-comprimir
+     - name: step02 - Crear cinco archivos
+       run: |
+         cd para-comprimir
+         echo 'archivo01' > archivo01.html
+         echo 'archivo02' > archivo02.html
+         echo 'archivo03' > archivo03.html
+         echo 'archivo04' > archivo04.html
+         echo 'archivo05' > archivo05.html
+     - name: step03 - Comprimir los archivos
+       run: zip -r artefacto.zip para-comprimir
+     - name: step04 - Verificamos la creacion del ZIP
        run: ls -la
-     - name: step02
-       run: date
-     - name: step03
-       run: df -h
       
