@@ -9,7 +9,7 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, debian:latest]    
+        os: [ubuntu-latest, macos-latest, debian-latest]    
     steps:
       - name: Checkout del repositorio
         uses: actions/checkout@v2
