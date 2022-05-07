@@ -5,7 +5,7 @@ on:
       - main03
 jobs:
   configuracion:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
      - name: Checkout script configuracion
        uses: actions/checkout@v2
