@@ -11,6 +11,11 @@ jobs:
         image: httpd:latest
         ports:
           - 8080:80
+          
     steps:
-     - name: Acceder al Portal
-       run: curl http://localhost:8080
+     - name: Checkout hola.php
+       uses: actions/checkout@v2
+     - name: Copiamos hola.php a www
+       run: cp hola.php ~/var/www
+     - name: Acceder a hola.php
+       run: curl http://localhost:8080/hola.php
