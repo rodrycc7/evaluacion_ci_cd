@@ -11,10 +11,8 @@ jobs:
       matrix:
         os: [ubuntu-latest, debian-latest, alpine-latest]    
     steps:
-      - name: Checkout del repositorio
-        uses: actions/checkout@v2
       - name: Sistema Operativo        
-        run: echo "S. O.:${{ runner.os }}!"
+        run: lsb_release -d
       - name: Recursos Hardware
         run: lscpu
       - name: IP
