@@ -29,4 +29,10 @@ jobs:
        with:
          name: artefacto
          path: artefacto.zip
-      
+     - name: step06 - Download artefacto.zip
+       uses: actions/download-artifact@v3
+       with:
+         name: artefacto
+         path: ~/artefacto
+     - name: step07 - Verificamos la descarga
+       run: ls -la ~/artefacto
