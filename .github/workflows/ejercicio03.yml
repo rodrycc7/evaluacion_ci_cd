@@ -2,7 +2,7 @@ name: Ejercicio03
 on:
   push:
     branches:
-      - main03
+      - main
 jobs:
   configuracion:
     runs-on: self-hosted
@@ -13,7 +13,7 @@ jobs:
        run: sh ./configuracion.sh
   construccion:
     needs: configuracion
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
      - name: Checkout script construccion
        uses: actions/checkout@v2
@@ -21,7 +21,7 @@ jobs:
        run: sh ./construccion.sh
   prueba01:
     needs: construccion
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
      - name: Checkout script prueba
        uses: actions/checkout@v2
