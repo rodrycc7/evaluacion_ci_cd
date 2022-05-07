@@ -18,7 +18,15 @@ jobs:
          echo 'archivo04' > archivo04.html
          echo 'archivo05' > archivo05.html
      - name: step03 - Comprimir los archivos
-       run: zip -r artefacto.zip para-comprimir
+       uses: papeloto/action-zip@v1
+       with:
+         files: para-comprimir
+         dest: artefacto.zip
      - name: step04 - Verificamos la creacion del ZIP
        run: ls -la
+     - name: step05 - Upload artefacto.zip
+       uses: actions/upload-artifact@v3
+       with:
+         name: artefacto
+         path: artefacto.zip
       
