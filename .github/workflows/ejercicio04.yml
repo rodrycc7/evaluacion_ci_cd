@@ -15,6 +15,8 @@ jobs:
     steps:
      - name: Checkout hola.php
        uses: actions/checkout@v2
+     - name: ls
+       run: ls -la
      - name: Copiamos hola.php a www
        run: cp hola.php ~/var/www
      - name: Acceder a hola.php
