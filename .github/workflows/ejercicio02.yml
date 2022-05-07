@@ -2,7 +2,7 @@ name: Ejercicio02
 on:
   push:
     branches:
-      - main
+      - main02
 jobs:
   configuracion:
     runs-on: ubuntu-latest
