@@ -2,7 +2,7 @@ name: Ejercicio04
 on:
   push:
     branches:
-      - main
+      - main04
 jobs:
   crear-acceder-contenedor:
     runs-on: ubuntu-latest
