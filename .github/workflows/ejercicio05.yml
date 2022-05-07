@@ -16,6 +16,6 @@ jobs:
       - name: Sistema Operativo        
         run: echo "S. O.:${{ runner.os }}!"
       - name: Recursos Hardware
-        run: echo "HARDWARE:${{ runner.hw }}!"
+        run: cat /proc/cpuinfo | grep “model name”
       - name: IP
         run: ip add
