@@ -9,13 +9,13 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        os: [ubuntu-latest, debian-latest]    
+        os: [ubuntu-latest, debian-latest, alpine-latest]    
     steps:
       - name: Checkout del repositorio
         uses: actions/checkout@v2
       - name: Sistema Operativo        
         run: echo "S. O.:${{ runner.os }}!"
       - name: Recursos Hardware
-        run: echo "HARDWARE:${{ runner.os }}!"
+        run: echo "HARDWARE:${{ runner.hw }}!"
       - name: IP
         run: ip add
