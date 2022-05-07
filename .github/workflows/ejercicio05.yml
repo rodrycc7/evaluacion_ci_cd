@@ -1,0 +1,21 @@
+name: Ejercicio01
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, debian:latest]    
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v2
+      - name: Sistema Operativo        
+        run: echo "S. O.:${{ runner.os }}!"
+      - name: Recursos Hardware
+        run: echo "HARDWARE:${{ runner.os }}!"
+      - name: IP
+        run: ip add
